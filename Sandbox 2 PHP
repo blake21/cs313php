@@ -1,0 +1,111 @@
+
+<html>
+  <head>
+    <title>Week 11 : Problem 1</title>
+  </head>
+  <body>
+    <?php echo '<p>Hello World</p>'; ?>
+  </body>
+</html>
+
+<html>
+<head>
+<title>Week 11 : Problem 2</title>
+</head>
+<body>
+<?php
+echo "Today is " . date("l") . date("m/d/y") . date("h:i:sa");
+?>
+</body>
+</html>
+
+
+<html>
+<head>
+<title>Week 11 : Problem 3</title>
+</head>
+<body>
+<?php
+echo $_POST["input3"];
+?>
+</body>
+</html>
+
+<html>
+<head>
+<title>Week 11:Problem 4</title>
+</head>
+<body>
+<?php
+
+$word = array("one"=>"uno", "two"=>"dos", "three"=>"tres", "four"=>"cuatro",
+              "five"=>"cinco", "six"=>"seis", "seven"=>"siete", "eight"=>"ocho"
+              , "nine"=>"nueve", "ten"=>"diez", "eleven"=>"once",
+              "twelve"=>"doce", "thirteen"=>"trece", "fourteen"=>"catorce",
+              "fifteen"=>"quince", "sixteen"=>"dieciseis",
+              "seventeen"=>"diecisiete", "eighteen"=>"dieciocho",
+              "nineteen"=>"diecinueve", "twenty"=>"veinte");
+
+if (!array_key_exists($_POST["input4"], $word)) {
+   echo "The English cardinal " . $_POST["input4"] . " is not between one
+and twenty.";
+}
+else {
+echo $word[$_POST["input4"]];
+}
+?>
+</body>
+</html>
+
+<html>
+<head>
+<title>Week11:Problem5</title>
+</head>
+<body>
+
+<table border="1">
+    <tr>
+    <td>N</td>
+    <td>X^n</td>
+    </tr>
+<?php
+$n = $_POST["n"];
+$x = $_POST["x"];
+$constP = $_POST["x"];
+
+$it = 1;
+
+while($it <= $n) {
+   echo "<tr>".PHP_EOL;
+   echo "<td>".$it."</td>".PHP_EOL;
+   echo "<td>".$x."</td>".PHP_EOL;
+    $x *= $constP;
+    $it++;
+   echo "</tr>".PHP_EOL;
+}
+?>
+</table>
+</body>
+</html>
+
+<html>
+<head>
+<title>Week11:Problem6</title>
+</head>
+<body>
+<table border="1">
+<?php
+$string = $_POST["input6"];
+
+$array = preg_split("/[\s,]+/", $string);
+$arrlength = count($array);
+asort($array);
+
+foreach ($array as &$value) {
+   echo "<tr>"."<td>".$value."</td>"."</tr>".PHP_EOL;
+
+}
+?>
+</table>
+</body>
+</html>

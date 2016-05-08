@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Survey Assessment</title>
+    <h1>Survey Assessment</h1>
+  </head>
+  <body>
+    <form action="results.php" id="id1" method="post">
+      1. What is your favorite color?
+      <input name="name"  type="text" value=""/><br><br>
+      2. What is your favorite movie?
+      <input name="email" type="text" value=""/><br><br>
+      3. What is your major?<br>
+      <input type="radio" name="major" value="Computer Science">Computer Science<br>
+      <input type="radio" name="major" value="Web Development and Design">Web Development and Design<br>
+      <input type="radio" name="major" value="Computer Information Technology">Computer Information Technology<br>
+      <input type="radio" name="major" value="Computer Engineering">Computer Engineering<br><br>
+      <p>4. What programming languages do you know?</p>
+      <input type="checkbox" name="check_list[]" value="C">C<br>
+      <input type="checkbox" name="check_list[]" value="C++">C++<br>
+      <input type="checkbox" name="check_list[]" value="C*">C*<br>
+      <input type="checkbox" name="check_list[]" value="Swift">Swift<br>
+      <input type="checkbox" name="check_list[]" value="Pearl">Pearl<br>
+      <input type="checkbox" name="check_list[]" value="Java">Java<br>
+      <input type="checkbox" name="check_list[]" value="JavaScript">JavaScript<br><br>
+
+      <br><input type="submit" value="submit"/>
+    </form>
+      <a href="results.php">Go directly to survey results</a>
+  </body>
+</html>
